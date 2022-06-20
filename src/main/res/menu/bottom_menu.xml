@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/community1"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_comment_24"
+        android:title="커뮤니티"
+        />
+
+    <item
+        android:id="@+id/camera1"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_camera_alt_24"
+        android:title="+"
+        />
+
+    <item
+        android:id="@+id/mypage1"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_settings_24"
+        android:title="마이볼"
+        />
+
+</menu>

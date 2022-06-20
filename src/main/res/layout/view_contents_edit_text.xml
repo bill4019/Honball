@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<EditText xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/et_content"
+    android:layout_width="330dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="start|top"
+    android:hint="내용"
+    android:inputType="text"
+    android:textColor="#6A6A6A"
+    android:textColorHint="#989898"
+    android:background="@android:color/transparent"
+    android:textCursorDrawable="@drawable/cursor_drawable"
+    android:fontFamily="@font/nanumbarungothic" />
+

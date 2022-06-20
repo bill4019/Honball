@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        layout="@layout/view_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:background="#FFFFFF"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="50dp"
+                        app:cardCornerRadius="100dp"
+                        app:layout_constraintVertical_bias="0.52">
+
+                        <ImageView
+                            android:id="@+id/profileimage"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:adjustViewBounds="true"
+                            app:srcCompat="@drawable/ic_profile" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <EditText
+                        android:id="@+id/et_name"
+                        android:layout_width="300dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="40dp"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/nanumbarungothic"
+                        android:hint="이름"
+                        android:inputType="textPersonName"
+                        android:textColor="#6A6A6A"
+                        android:textColorHint="#989898"
+                        android:textCursorDrawable="@drawable/cursor_drawable" />
+
+                    <View
+                        android:id="@+id/view11"
+                        android:layout_width="300dp"
+                        android:layout_height="0.3dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:background="#404040" />
+
+                    <EditText
+                        android:id="@+id/et_nickname"
+                        android:layout_width="300dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/nanumbarungothic"
+                        android:hint="별명"
+                        android:inputType="textPersonName"
+                        android:textColor="#6A6A6A"
+                        android:textColorHint="#989898"
+                        android:textCursorDrawable="@drawable/cursor_drawable" />
+
+                    <View
+                        android:id="@+id/view12"
+                        android:layout_width="300dp"
+                        android:layout_height="0.3dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:background="#404040" />
+
+                    <EditText
+                        android:id="@+id/et_phone"
+                        android:layout_width="300dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/nanumbarungothic"
+                        android:hint="핸드폰 (-제외)"
+                        android:inputType="phone"
+                        android:textColor="#6A6A6A"
+                        android:textColorHint="#989898"
+                        android:textCursorDrawable="@drawable/cursor_drawable" />
+
+                    <View
+                        android:id="@+id/view13"
+                        android:layout_width="300dp"
+                        android:layout_height="0.3dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:background="#404040" />
+
+                    <EditText
+                        android:id="@+id/et_birth"
+                        android:layout_width="300dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/nanumbarungothic"
+                        android:hint="생년월일"
+                        android:inputType="date"
+                        android:textColor="#6A6A6A"
+                        android:textColorHint="#989898"
+                        android:textCursorDrawable="@drawable/cursor_drawable" />
+
+                    <View
+                        android:id="@+id/view14"
+                        android:layout_width="300dp"
+                        android:layout_height="0.3dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:background="#404040" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_checkInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_radius"
+            android:fontFamily="@font/nanumbarungothic"
+            android:text="확인"
+            android:textColor="#FFFFFF" />
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="bottom"
+        tools:context=".activity.RegisterActivity"
+        android:background="#7E858585">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_cardview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="#FFFFFF"
+            android:visibility="gone"
+            app:cardCornerRadius="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="#FFFFFF"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_edit_image"
+                    android:layout_width="150dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/button_radius"
+                    android:fontFamily="@font/nanumbarungothic"
+                    android:text="사진촬영"
+                    android:textColor="#FFFFFF" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_edit_video"
+                    android:layout_width="150dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="right"
+                    android:background="@drawable/button_radius"
+                    android:fontFamily="@font/nanumbarungothic"
+                    android:text="갤러리"
+                    android:textColor="#FFFFFF" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <include
+            layout="@layout/view_loader"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

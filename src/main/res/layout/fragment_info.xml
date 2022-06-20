@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        layout="@layout/view_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                android:layout_marginTop="20dp"
+                android:text="회원정보"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp"
+                    app:cardBackgroundColor="#000000"
+                    app:cardCornerRadius="100dp"
+                    app:layout_constraintBottom_toTopOf="@+id/et_name"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView8"
+                    app:layout_constraintVertical_bias="0.52">
+
+                    <ImageView
+                        android:id="@+id/profileimage"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        app:srcCompat="@drawable/ic_baseline_camera_alt_24" />
+
+                </androidx.cardview.widget.CardView>
+
+                <EditText
+                    android:id="@+id/et_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="50dp"
+                    android:background="#F3DADA"
+                    android:ems="10"
+                    android:hint="이름"
+                    android:inputType="textPersonName"
+                    android:minHeight="48dp"
+                    android:textColor="#000000"
+                    android:textColorHint="#5E5C5C"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+                <EditText
+                    android:id="@+id/et_nickname"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginRight="50dp"
+                    android:background="#F3DADA"
+                    android:ems="10"
+                    android:hint="별명"
+                    android:inputType="textPersonName"
+                    android:textColorHint="#5E5C5C"
+                    app:layout_constraintEnd_toEndOf="@+id/et_name"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/et_name"
+                    app:layout_constraintTop_toBottomOf="@+id/et_name" />
+
+                <EditText
+                    android:id="@+id/et_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginRight="50dp"
+                    android:background="#F3DADA"
+                    android:ems="10"
+                    android:hint="핸드폰 (-제외)"
+                    android:inputType="phone"
+                    android:textColorHint="#5E5C5C"
+                    app:layout_constraintEnd_toEndOf="@+id/et_birth"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/et_birth"
+                    app:layout_constraintTop_toBottomOf="@+id/et_birth" />
+
+                <EditText
+                    android:id="@+id/et_birth"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginRight="50dp"
+                    android:background="#F3DADA"
+                    android:ems="10"
+                    android:hint="생년월일"
+                    android:inputType="date"
+                    android:textColorHint="#5E5C5C"
+                    app:layout_constraintEnd_toEndOf="@+id/et_nickname"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/et_nickname"
+                    app:layout_constraintTop_toBottomOf="@+id/et_nickname" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_checkInfo"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="75dp"
+        android:background="#009688"
+        android:backgroundTint="#7A5252"
+        android:text="확인"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_phone"
+        app:rippleColor="#2196F3" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        tools:context=".activity.RegisterActivity">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_cardview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="20dp"
+            android:elevation="10dp"
+            android:foregroundGravity="bottom"
+            android:visibility="gone"
+            app:cardCornerRadius="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_checkInfo">
+
+            <LinearLayout
+                android:layout_width="350dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_edit_image"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="사진촬영" />
+
+                <Button
+                    android:id="@+id/btn_edit_video"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:layout_weight="1"
+                    android:text="갤러리" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <include
+            layout="@layout/view_loader"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

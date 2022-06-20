@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        layout="@layout/view_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:background="#FFFFFF"
+        tools:context=".activity.RegisterActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/et_id"
+                android:layout_width="300dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/nanumbarungothic"
+                android:hint="이메일 주소"
+                android:textColor="#6A6A6A"
+                android:inputType="textEmailAddress"
+                android:textColorHint="#989898"
+                android:textCursorDrawable="@drawable/cursor_drawable" />
+
+            <View
+                android:layout_width="300dp"
+                android:layout_height="0.3dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="#404040" />
+
+            <EditText
+                android:id="@+id/et_pass"
+                android:layout_width="300dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/nanumbarungothic"
+                android:hint="영문,숫자, 특수문자 조합 8자 이상"
+                android:textColor="#6A6A6A"
+                android:inputType="textPassword"
+                android:textColorHint="#989898"
+                android:textCursorDrawable="@drawable/cursor_drawable" />
+
+            <View
+                android:layout_width="300dp"
+                android:layout_height="0.3dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="#404040" />
+
+            <EditText
+                android:id="@+id/et_passcheck"
+                android:layout_width="300dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/nanumbarungothic"
+                android:hint="비밀번호 확인"
+                android:textColor="#6A6A6A"
+                android:inputType="textPassword"
+                android:textColorHint="#989898"
+                android:textCursorDrawable="@drawable/cursor_drawable" />
+
+            <View
+                android:layout_width="300dp"
+                android:layout_height="0.3dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="#404040" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_checkInfo"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/button_radius"
+                android:fontFamily="@font/nanumbarungothic"
+                android:text="회원가입"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+
+        <include
+            layout="@layout/view_loader"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+</RelativeLayout>

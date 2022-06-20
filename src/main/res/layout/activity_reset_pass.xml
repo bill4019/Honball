@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        layout="@layout/view_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:background="#FFFFFF"
+        tools:context=".activity.RegisterActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="false"
+            android:layout_marginTop="200dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/et_id"
+                android:layout_width="300dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:hint="이메일 주소"
+                android:inputType="textEmailAddress"
+                android:textColor="#6A6A6A"
+                android:textColorHint="#989898"
+                android:background="@android:color/transparent"
+                android:textCursorDrawable="@drawable/cursor_drawable"
+                android:fontFamily="@font/nanumbarungothic" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="300dp"
+                android:layout_height="0.3dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="#404040" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_checkInfo"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/button_radius"
+                android:fontFamily="@font/nanumbarungothic"
+                android:text="메일보내기"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+        <include
+            layout="@layout/view_loader"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+    </RelativeLayout>
+</RelativeLayout>
